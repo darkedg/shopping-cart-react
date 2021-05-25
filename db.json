@@ -1,5 +1,5 @@
 {
-  "products": [
+  "producs": [
     {
       "id": 1,
       "name": "Camisa Parkour",
@@ -9,66 +9,31 @@
     },
     {
       "id": 2,
-      "name": "Camisa Oxford",
-      "size": "S-3XL",
-      "price": 31.60,
-      "image": "img/camisa2.jpg"
-    },
-    {
-      "id": 3,
       "name": "Camisa Azul Claro",
       "size": "XL",
       "price": 41.55,
       "image": "img/camisa3.jpg"
     },
     {
-      "id": 4,
-      "name": "Polo Spencer",
-      "size": "M",
-      "price": 38.99,
-      "image": "img/polo1.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Polo Clásico",
-      "size": "XL",
-      "price": 39.15,
-      "image": "img/polo2.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Polo Lacoste",
-      "size": "L",
-      "price": 41.25,
-      "image": "img/polo3.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Polo Burberry.",
-      "size": "XL",
-      "price": 40.99,
-      "image": "img/polo4.jpg"
-    },
-    {
-      "id": 8,
+      "id": 3,
       "name": "Camiseta",
       "size": "L",
       "price": 38.17,
       "image": "img/camiseta1.jpg"
     },
     {
-      "id": 9,
-      "name": "Camiseta",
-      "size": "3XL",
-      "price": 37.95,
-      "image": "img/camiseta2.jpg"
+      "id": 4,
+      "name": "Polo Clásico",
+      "size": "XL",
+      "price": 39.15,
+      "image": "img/polo1.jpg"
     },
     {
-      "id": 10,
-      "name": "Camiseta",
-      "size": "M",
-      "price": 37.05,
-      "image": "img/camiseta3.jpg"
+      "id": 5,
+      "name": "Polo Lacoste",
+      "size": "L",
+      "price": 41.25,
+      "image": "img/polo3.jpg"
     }
   ]
 }
