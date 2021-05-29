@@ -3,6 +3,7 @@
 
   .card {
     margin: 15px;
+    text-align: center;
 
     &:hover {
       background-color: #E5E8E8;
@@ -11,11 +12,7 @@
     .card-title {
       height: 50px;
     }
-
-    .card-text {
-      text-align: center;
-    }
-
+    
     .btn {
       width: 100%;
       background-color: transparent;

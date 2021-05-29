@@ -3,7 +3,7 @@ import Loading from "../Loading";
 import Product from "../Product";
 
 const Products = (props) => {
-  const { products: { result, loading, error } } = props;
+  const { products: { result, loading, error }, addProductCart } = props;
 
   return (
     <Container>
@@ -13,7 +13,7 @@ const Products = (props) => {
             <Loading />
           ) : (
             result.map((product, index) => (
-              <Product key={index} product={product} />
+              <Product key={index} product={product} addProductCart={addProductCart} />
             ))
           )
         }

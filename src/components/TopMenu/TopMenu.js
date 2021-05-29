@@ -1,15 +1,19 @@
 import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { ReactComponent as Logo } from '../../assets/svg/logo.svg';
+import Cart from '../Cart/Cart';
 
 import './TopMenu.scss';
 
-const TopMenu = () => {
+const TopMenu = (props) => {
+  const { productsCart } = props;
+
   return (
     <Navbar bg="dark" variant="dark" className="top-menu">
       <Container>
         <BrandNav />
-        <MenuNav />
+        {/* <MenuNav /> */}
+        <Cart productsCart={productsCart} />
       </Container>
     </Navbar>
   )
