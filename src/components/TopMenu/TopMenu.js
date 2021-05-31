@@ -6,17 +6,21 @@ import Cart from '../Cart/Cart';
 import './TopMenu.scss';
 
 const TopMenu = (props) => {
-  const { productsCart } = props;
+  const { productsCart, getProductsCart, products } = props;
 
   return (
     <Navbar bg="dark" variant="dark" className="top-menu">
       <Container>
         <BrandNav />
         {/* <MenuNav /> */}
-        <Cart productsCart={productsCart} />
+        <Cart
+          productsCart={productsCart}
+          getProductsCart={getProductsCart}
+          products={products}
+        />
       </Container>
     </Navbar>
-  )
+  );
 }
 
 function BrandNav() {
