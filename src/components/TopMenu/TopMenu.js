@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import { ReactComponent as Logo } from '../../assets/svg/logo.svg';
 import Cart from '../Cart/Cart';
 
@@ -32,14 +32,14 @@ function BrandNav() {
   );
 }
 
-function MenuNav() {
-  return (
-    <Nav className="mr-auto">
-      <Nav.Link href="#">Camisas</Nav.Link>
-      <Nav.Link href="#">Camisetas</Nav.Link>
-      <Nav.Link href="#">Polos</Nav.Link>
-    </Nav>
-  )
-}
+// function MenuNav() {
+//   return (
+//     <Nav className="mr-auto">
+//       <Nav.Link href="#">Camisas</Nav.Link>
+//       <Nav.Link href="#">Camisetas</Nav.Link>
+//       <Nav.Link href="#">Polos</Nav.Link>
+//     </Nav>
+//   )
+// }
 
 export default TopMenu;
