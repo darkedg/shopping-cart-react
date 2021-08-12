@@ -18,11 +18,39 @@ const Cart = (props) => {
   const [cartOpen, setCartOpen] = useState(false);
   const widthCartContent = cartOpen ? 400 : 0;
   const [singelProductsCart, setSingelProductsCart] = useState([]);
+  const [cartTotalPrice, setCartTotalPrice] = useState(0);
 
   useEffect(() => {
     const allProductsId = removeArrayDuplicates(productsCart);
     setSingelProductsCart(allProductsId);
   }, [productsCart]);
+
+  useEffect(() => {
+    const productData = [];
+    let totalPrice = 0;
+
+    const allProductsId = removeArrayDuplicates(productsCart);
+    allProductsId.forEach(productId => {
+      const quantity = countDuplicatesItemArray(productId, productsCart);
+      const productValue = {
+        id: productId,
+        quantity: quantity
+      };
+      productData.push(productValue);
+    });
+
+    if(!products.loading && products.result) {
+      products.result.forEach(product => {
+        productData.forEach(item => {
+          if(product.id == item.id) {
+            const totalValue = product.price * item.quantity;
+            totalPrice = totalPrice + totalValue;
+          }
+        });
+      });
+    }
+    setCartTotalPrice(totalPrice);
+  }, [productsCart, products]);
 
   const openCart = () => {
     setCartOpen(true);
@@ -76,6 +104,7 @@ const Cart = (props) => {
             />
           ))}
         </div>
+        <CartContentFooter cartTotalPrice={cartTotalPrice} />
       </div>
     </>
   );
@@ -136,7 +165,7 @@ function RenderProduct(props) {
       <div className="cart-content__product-info">
         <div>
           <h3>{product.name.substr(0, 25)}...</h3>
-          <p>{product.price.toFixed(2)} c / unid.</p>
+          <p>{product.price.toFixed(2)} $ / unid.</p>
         </div>
         <div>
           <p>En carrito: {quantity} unid.</p>
@@ -146,6 +175,20 @@ function RenderProduct(props) {
           </div>
         </div>
       </div>
+    </div>
+  )
+}
+
+function CartContentFooter(props) {
+  const { cartTotalPrice } = props;
+
+  return (
+    <div className="cart-content__footer">
+      <div>
+        <p>Total aproximado: </p>
+        <p>{cartTotalPrice.toFixed(2)} $</p>
+      </div>
+      <Button>Comprar pedido</Button>
     </div>
   )
 }
