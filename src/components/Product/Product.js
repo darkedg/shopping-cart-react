@@ -7,7 +7,7 @@ const Product = (props) => {
   const { product, addProductCart } = props;
 
   return (
-    <Col xs={3} className="product">
+    <Col xs={12} sm={6} md={3} className="product">
       <Card>
         <Card.Img variant="top" src={`${BASE_PATH}/${product.image}`} />
         <Card.Body>

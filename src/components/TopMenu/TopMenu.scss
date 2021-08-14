@@ -15,4 +15,12 @@
       font-size: 22px;
     }
   }
+
+  @media all and (max-width: 768px) {
+    .navbar-brand {
+      h2 {
+        font-size: 18px;
+      }
+    }
+  }
 }

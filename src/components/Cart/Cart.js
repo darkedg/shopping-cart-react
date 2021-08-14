@@ -16,7 +16,7 @@ import "./Cart.scss";
 const Cart = (props) => {
   const { productsCart, getProductsCart, products } = props;
   const [cartOpen, setCartOpen] = useState(false);
-  const widthCartContent = cartOpen ? 400 : 0;
+  const widthCartContent = cartOpen ? 350 : 0;
   const [singelProductsCart, setSingelProductsCart] = useState([]);
   const [cartTotalPrice, setCartTotalPrice] = useState(0);
 
